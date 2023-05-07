@@ -14,9 +14,11 @@ namespace Wenli.IEM
 {
     public partial class WordBoard : CCWin.Skin_Mac
     {
+
         public WordBoard()
         {
             InitializeComponent();
+ 
         }
 
         private void WordBoard_Load(object sender, EventArgs e)
@@ -25,6 +27,10 @@ namespace Wenli.IEM
             Program.keyBordHook.OnSpaced += KeyBordHook_OnSpaced;
             Program.keyBordHook.OnBacked += KeyBordHook_OnBacked;
             Program.keyBordHook.OnPaged += KeyBordHook_OnPaged;
+
+            int x = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
+            int y = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
+            this.Location = new Point(x, y);
         }
 
 
@@ -36,14 +42,14 @@ namespace Wenli.IEM
             keys += e.KeyCode.ToString().ToLower();
             this.ShowCharatar();
         }
-
+        
         private void KeyBordHook_OnSpaced(int choose)
         {
             try
             {
                 if (CacheHelper.ContainsKey(keys))
                 {
-                    if (choose > 0)
+                     if (choose > 0)
                     {
                         choose = choose - 1;
                     }
@@ -85,17 +91,20 @@ namespace Wenli.IEM
         {
             this.listView1.BeginInvoke(new Action(() =>
             {
-                label1.Text = keys;
+                label1.Text = keys.ToUpper();
+
 
                 try
                 {
+                    //this.BackColor = Color.White;
                     var arr = CacheHelper.Get(keys).ToList().Skip((pageIndex - 1) * 9).Take(9).ToArray();
                     if (arr != null && arr.Any())
                     {
                         this.listView1.Items.Clear();
                         for (int i = 0; i < arr.Count(); i++)
                         {
-                            this.listView1.Items.Add((i + 1) + "、" + arr[i]);
+                            //this.listView1.Items.Add((i + 1) + "、" + arr[i]);
+                            this.listView1.Items.Add((i) + "、" + arr[i]);
                         }
                     }
                     else
@@ -104,10 +113,24 @@ namespace Wenli.IEM
                 }
                 catch
                 {
-                    label1.Text = keys = "";
+                    //當 空碼 時
+                    //label1.Text = keys = "";
+
+                    //當 組字長度為 5 空碼 時
+                    if (label1.Text.Length == 5)
+                    {
+                        label1.Text = keys = "";
+                    }
                 }
             }));
         }
 
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int x = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
+            int y = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
+            this.Location = new Point(x, y);
+            this.Show();
+        }
     }
 }

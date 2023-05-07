@@ -29,6 +29,7 @@ namespace Wenli.IEM.Helper
         public static void GenerateFile()
         {
             var path = Application.StartupPath + "\\汉字拼音对照表.txt";
+            //MessageBox.Show(path.ToString());
             dic = new Dictionary<string, List<PinYinModel>>();
             var arr = File.ReadAllLines(path);
             foreach (var item in arr)

@@ -1,0 +1,15 @@
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.csproj.AssemblyReference.cache
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.csproj.SuggestedBindingRedirects.cache
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.Properties.Resources.resources
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.WordBoard.resources
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.csproj.GenerateResource.cache
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.csproj.CoreCompileInputs.cache
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Win32\pinyin.dll
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Win32\world.dll
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Wenli.IEM.exe.config
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Wenli.IEM.exe
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Wenli.IEM.pdb
+C:\Users\cc\Desktop\Wenli.IEM-master\bin\Release\Newtonsoft.Json.xml
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.csproj.CopyComplete
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.exe
+C:\Users\cc\Desktop\Wenli.IEM-master\obj\Release\Wenli.IEM.pdb
