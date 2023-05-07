@@ -19,15 +19,26 @@
 
 Wenli.IEM.Helper.Generate.GenerateFile()
 
-將路徑 Application.StartupPath + "\\汉字拼音对照表.txt"; 
+將路徑 Application.StartupPath + "\\汉字拼音对照表.txt" 
 
-的文件轉換為   Application.StartupPath + \\Win32\\pinyin.dll
+的文件轉換為   Application.StartupPath + "\\Win32\\pinyin.dll"
 
 汉字拼音对照表.txt 內容格式為  中文字串+空格+編碼
+
 例如:
+
 對 a
+
 寸 aa
+
 丶 aa
+
 丶 aav
 
 <img src="https://github.com/copy0401/Wenli.IEM/blob/master/3.png?raw=true"/>
+
+目前當 pinyin.dll 不存在時
+
+會由 汉字拼音对照表.txt 的內容
+
+產生 pinyin.dll 
